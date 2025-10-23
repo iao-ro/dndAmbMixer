@@ -1,0 +1,319 @@
+/* main styling */
+body {
+	background-color:rgb(214, 214, 214);
+    background-image: url("../img/parchment.png");
+    background-blend-mode: overlay;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+.pageLnk{
+    border: 3px outset grey;
+    background-color: gray;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.pageLnk:hover{
+    background-color: lightgray;
+}
+.pageLnk:active{
+    border: 3px inset grey;
+}
+h1 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size:48pt; 
+    text-align:center; 
+    padding-left:50px;
+    top:10px;
+}
+p {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+#banner {
+    margin-top: -10px;
+    margin-left: -8px;
+}
+.mixCol {
+    background-image: url("../img/mixcol.png");
+    object-fit: fill;
+    background-color: black;
+    margin-left: 30px;
+    width: 100px;
+    height:500px;
+    display: flex;
+    float: left;
+}
+.chName{
+    margin-top: 0px;
+}
+.srcSel{
+    width: 100px;
+    height: 19px;
+    display: block;
+    margin-top: 20px;
+    position: absolute;
+}
+.mixCol p{
+    width: 100px;
+    background-color: white;
+    height:19px;
+    position: absolute;
+}
+/* sliders */
+input[type='range'][orient='270deg'] { 
+    transform: rotate( 270deg ); 
+}
+.slider{
+    appearance: none;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+input[type=range].slider::-webkit-slider-thumb{
+    appearance: none;
+    opacity: 1;
+    width: 8px;
+    margin-bottom: 0.5px;
+    height: 19px;
+    border-radius: 2px;
+    background: #979797;
+    cursor: pointer;
+}
+input[type=range].slider:hover::-webkit-slider-thumb{
+    background: blue;
+    box-shadow: 0 0 1px black;
+}
+.chVol{
+    margin-top: 440px;
+    width: 100px;
+    height: 10px;
+    margin-left:30px;
+    position: absolute;
+}
+#mVol{
+    margin-top: 96px;
+    margin-left: 350px;
+    height: 10px;
+    width: 190px;
+    position: absolute;
+}
+[id$="Pan"]{
+    margin-top: 360px;
+    margin-left: 10px;
+    width: 80px;
+    height: 10px;
+    z-index: +1;
+}
+.eqSlid{
+    height: 10px;
+    width: 150px;
+}
+.eq{
+    margin-top: 40px;
+    position: absolute;
+}
+.eqCon{
+    margin-top: 55px;
+    position:absolute;
+}
+.eqLbl{
+    color: white;
+    font-size: 10px;
+    margin-top: 38px;
+    margin-left: 5px;
+    position: absolute;
+}
+.eqLbl[for="Q"]{
+    margin-left: 63px;
+}
+[id$="Q"].eqSlid{
+    margin-left: -7px;
+}
+.eqCon input{
+    margin-top: 120px;
+    margin-left: -60px;
+    float: left;
+    position: absolute;
+}
+[id^="selFil"]{
+    width: 100px;
+    margin-top: 5px;
+    margin-left: 0px;
+    position: absolute;
+    border-radius: 0px;
+}
+[id^="filImg"]{
+    margin-top: 5px;
+    margin-left: 25px;
+    position: absolute;
+    width: 40px;
+    height: 35px;
+}
+.freqLbl{
+    margin-left: 30px;
+}
+.qLbl{
+    margin-left: 80px;
+}
+.maxLbl{
+    color: white;
+    font-size: 10px;
+    margin-top: 45px;
+    position: absolute;
+}
+.minLbl{
+    color: white;
+    font-size: 10px;
+    margin-top: 190px;
+    position: absolute;
+}
+.fx{
+    margin-top: 280px;
+    position: absolute;
+}
+.fxSel{
+    width: 100px;
+    height: 19px;
+    display: block;
+    margin-top: 300px;
+    position: absolute;
+}
+.volBtns{
+    font-size: 6px;
+    width: 30px;
+    height: 20px;
+    margin-top: 325px;
+    position: absolute;
+}
+[id$="MuteBtn"]{
+    margin-left: 15px;
+    background-color: grey;
+}
+[id$="SoloBtn"]{
+    margin-left: 55px;
+    background-color: grey;
+}
+.panLbl{
+    margin-top: 357px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+.masterSec{
+    background-color: black;
+    width: 500px;
+    height: 200px;
+    margin-left: 70%;
+    display: flex;
+    position: absolute;
+    float: right;
+}
+.masBtns{
+    height: 20px;
+}
+.masBtnInd{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.fxSec{
+    background-color: black;
+    margin-top: 250px;
+    margin-left: 10px;
+    margin-right: 50px;
+    width: 130px;
+    height: 250px;
+    display: flex;
+    float: right;
+}
+.fxSec p{
+    width: 130px;
+    background-color: white;
+    margin-top: 0px;
+    height:19px;
+    position: absolute;
+}
+.fxSelect {
+    margin-top: 20px;
+    width: 130px;
+}
+.revLbl{
+    margin-top: 8px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+[id*="RevSec"] {
+    visibility: hidden;
+    margin-left: 47px;
+}
+#rMix {
+    margin-top: 60px;
+}
+[id*="DelSec"] {
+    visibility: hidden;
+}
+.delLbl{
+    margin-top: -28px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+.minDelLbl{
+    margin-top: -10px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+.conDelLbl{
+    margin-left: 5px;
+    margin-top: 25px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+.minorDelCon{
+    margin-left: 25px;
+}
+[id$="DmMix"]{
+    margin-left: 50px;
+    margin-top: -35px;
+    position: absolute;
+}
+[id*="CompSec"] {
+    margin-top: -28px;
+    visibility: hidden;
+}
+[id*="CmThres"]{
+    margin-left: 50px;
+    margin-top: -35px;
+    position: absolute;
+}
+[id$="CmKnee"]{
+    margin-left: 28px;
+}
+[id$="CmRatio"]{
+    margin-left: 25px;
+}
+.compLbl {
+    margin-top: -30px;
+    margin-left: 1px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+.compMin{
+    margin-left: 1px;
+    color: white;
+    font-size: 10px;
+    position: absolute;
+}
+/*Knobs */
+.panKnobs {
+    margin-left: 27px;
+}
+
+header{
+    margin-top: 0px;
+    padding: 3px;
+    position: absolute;
+}
