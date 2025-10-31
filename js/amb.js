@@ -371,41 +371,48 @@ function masterChPlayBtn(ch){
         play = ch5Play
         V = ch5V
             console.log(gn);
-    } else {
+    } else if (ch == 6){
         gn = ch6Value.gainNode;
         play = ch6Play
         V = ch6V
+            console.log(gn);
+    } else {
+        gn = mGain;
+        play = mPlay
+        V = mV
             console.log(gn);
     }
 
         if (play == 0) {
             gn.gain.linearRampToValueAtTime(0, audCtx.currentTime + 5);
             play = 1;
+            document.getElementById('ch'+ch+'PlayBtn').style.backgroundColor = "red";
+            // document.querySelector('p#ch'+ch+'PlayBtn').innerHTML = gn.value
+            document.querySelector('p#ch'+ch+'PlayBtn').innerHTML = "Paused"
             console.log(play);
         } else if (play == 1) {
             gn.gain.linearRampToValueAtTime(V, audCtx.currentTime + 5);
             play = 0;
+            document.getElementById('ch'+ch+'PlayBtn').style.backgroundColor = "green";
+            // document.querySelector('p#ch'+ch+'PlayBtn').innerHTML = gn.value
+            document.querySelector('p#ch'+ch+'PlayBtn').innerHTML = "Playing"
             console.log(play);
         }
 
     if (ch == 1) {
         ch1Play = play;
-            console.log(ch1Play)
     } else if (ch == 2) {
         ch2Play = play;
-            console.log(ch1Play)
     } else if (ch == 3) {
         ch3Play = play;
-            console.log(ch1Play)
     } else if (ch == 4) {
         ch4Play = play;
-            console.log(ch1Play)
     } else if (ch == 5) {
         ch5Play = play;
-            console.log(ch1Play)
-    } else {
+    } else if (ch == 6) {
         ch6Play = play;
-            console.log(ch1Play)
+    } else {
+        mPlay= play;
     }
 }
 
@@ -997,5 +1004,4 @@ function compRatio(fx) {
         console.log(x);
     compressor1.ratio.setValueAtTime(x, audCtx.currentTime);
     compressor2.ratio.setValueAtTime(x, audCtx.currentTime);
-
 }
