@@ -800,7 +800,7 @@ var reverb2 = audCtx.createConvolver();
 function loadImp() {
     // create new XML request passing in the url from the selSrc
     var request = new XMLHttpRequest();
-    request.open('GET', './audio/revImpulse.wav', true);
+    request.open('GET', './audio/revImpulse.ogg', true);
     request.responseType = 'arraybuffer';
 
     // Decode asynchronously
@@ -997,4 +997,5 @@ function compRatio(fx) {
         console.log(x);
     compressor1.ratio.setValueAtTime(x, audCtx.currentTime);
     compressor2.ratio.setValueAtTime(x, audCtx.currentTime);
+
 }
