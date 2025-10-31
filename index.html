@@ -39,9 +39,10 @@
             <a class="pageLnk" href="ambabout.html">About Page</a>
         </header>
         <img src="img/banner.png" id="banner" alt="Page banner D&D Soundscape">
-            <h2>Audio Mixers</h2>
+            <h2>Audio Mixer</h2>
+            <div class="content-wrapper">
             <!--Channel 1-->
-            <div class="mixCol">
+            <div class="mixCol" id="chitem1">
                 <p class="chName">CH 1</p>
                     <select name="soundtype" id="sel1" onchange="selSrc('1','sel1')" class="srcSel">
                         <option value="None">None</option>
@@ -78,11 +79,11 @@
                 <button class="volBtns" id="ch1SoloBtn" onclick="ch1Solo()">S</button>
                 <label for="pan" class="panLbl"><span style="float: left; margin-left: 19px;">L </span><span style="margin-left: 35px;"> R</span></label>
                 <input type="range" class="input-knob panKnobs" name="pan" id="ch1Pan" min="-100" max="100" value="0" onchange="ch1Pan()" onmouseover="knobChgOver('ch1Pan')" onmouseout="knobChgOut('ch1Pan')">
-                <div id="ch1PeakMeter" style="width: 70px; height: 100px; margin-top:400px; position:absolute;"></div>
+                <div id="ch1PeakMeter"></div>
                 <input type="range" class="chVol slider" orient="270deg" id="ch1Vol" value="100" onchange="ch1Volume()">
             </div>
             <!--Channel 2-->
-            <div class="mixCol">
+            <div class="mixCol" id="chitem2">
                 <p class="chName">CH 2</p>
                     <select name="soundtype" id="sel2" onchange="selSrc('2','sel2')" class="srcSel">
                         <option value="None">None</option>
@@ -119,11 +120,11 @@
                 <button class="volBtns" id="ch2SoloBtn" onclick="ch2Solo()">S</button>
                 <label for="pan" class="panLbl"><span style="float: left; margin-left: 19px;">L </span><span style="margin-left: 35px;"> R</span></label>
                 <input type="range" class="input-knob panKnobs" name="pan" id="ch2Pan" min="-100" max="100" value="0" onchange="ch2Pan()" onmouseover="knobChgOver('ch2Pan')" onmouseout="knobChgOut('ch2Pan')">
-                <div id="ch2PeakMeter" style="width: 70px; height: 100px; margin-top:400px; position:absolute;"></div>
+                <div id="ch2PeakMeter"></div>
                 <input type="range" class="chVol slider" orient="270deg" id="ch2Vol" value="100" onchange="ch2Volume()">
             </div>  
             <!--Channel 3-->
-            <div class="mixCol">
+            <div class="mixCol" id="chitem3">
                 <p class="chName">CH 3</p>
                     <select name="soundtype" id="sel3" onchange="selSrc('3','sel3')" class="srcSel">
                         <option value="None">None</option>
@@ -160,11 +161,11 @@
                 <button class="volBtns" id="ch3SoloBtn" onclick="ch3Solo()">S</button>
                 <label for="pan" class="panLbl"><span style="float: left; margin-left: 19px;">L </span><span style="margin-left: 35px;"> R</span></label>
                 <input type="range" class="input-knob panKnobs" name="pan" id="ch3Pan" min="-100" max="100" value="0" onchange="ch3Pan()" onmouseover="knobChgOver('ch3Pan')" onmouseout="knobChgOut('ch3Pan')">
-                <div id="ch3PeakMeter" style="width: 70px; height: 100px; margin-top:400px; position:absolute;"></div>
+                <div id="ch3PeakMeter"></div>
                 <input type="range" class="chVol slider" orient="270deg" id="ch3Vol" value="100" onchange="ch3Volume()">
             </div>
             <!--Channel 4-->
-            <div class="mixCol">
+            <div class="mixCol" id="chitem4">
                 <p class="chName">CH 4</p>
                     <select name="soundtype" id="sel4" onchange="selSrc('4','sel4')" class="srcSel">
                         <option value="None">None</option>
@@ -201,11 +202,11 @@
                 <button class="volBtns" id="ch4SoloBtn" onclick="ch4Solo()">S</button>
                 <label for="pan" class="panLbl"><span style="float: left; margin-left: 19px;">L </span><span style="margin-left: 35px;"> R</span></label>
                 <input type="range" class="input-knob panKnobs" name="pan" id="ch4Pan" min="-100" max="100" value="0" onchange="ch4Pan()" onmouseover="knobChgOver('ch4Pan')" onmouseout="knobChgOut('ch4Pan')">
-                <div id="ch4PeakMeter" style="width: 70px; height: 100px; margin-top:400px; position:absolute;"></div>
+                <div id="ch4PeakMeter"></div>
                 <input type="range" class="chVol slider" orient="270deg" id="ch4Vol" value="100" onchange="ch4Volume()">
             </div>
             <!--Channel 5-->
-            <div class="mixCol">
+            <div class="mixCol" id="chitem5">
                 <p class="chName">CH 5</p>
                     <select name="soundtype" id="sel5" onchange="selSrc('5','sel5')" class="srcSel">
                         <option value="None">None</option>
@@ -242,11 +243,11 @@
                 <button class="volBtns" id="ch5SoloBtn" onclick="ch5Solo()">S</button>
                 <label for="pan" class="panLbl"><span style="float: left; margin-left: 19px;">L </span><span style="margin-left: 35px;"> R</span></label>
                 <input type="range" class="input-knob panKnobs" name="pan" id="ch5Pan" min="-100" max="100" value="0" onchange="ch5Pan()" onmouseover="knobChgOver('ch5Pan')" onmouseout="knobChgOut('ch5Pan')">
-                <div id="ch5PeakMeter" style="width: 70px; height: 100px; margin-top:400px; position:absolute;"></div>
+                <div id="ch5PeakMeter"></div>
                 <input type="range" class="chVol slider" orient="270deg" id="ch5Vol" value="100" onchange="ch5Volume()">
             </div>
             <!--Channel 6-->
-            <div class="mixCol">
+            <div class="mixCol" id="chitem6">
                 <p class="chName">CH 6</p>
                     <select name="soundtype" id="sel6" onchange="selSrc('6','sel6')" class="srcSel">
                         <option value="None">None</option>
@@ -283,21 +284,49 @@
                 <button class="volBtns" id="ch6SoloBtn" onclick="ch6Solo()">S</button>
                 <label for="pan" class="panLbl"><span style="float: left; margin-left: 19px;">L </span><span style="margin-left: 35px;"> R</span></label>
                 <input type="range" class="input-knob panKnobs" name="pan" id="ch6Pan" min="-100" max="100" value="0" onchange="ch6Pan()" onmouseover="knobChgOver('ch6Pan')" onmouseout="knobChgOut('ch6Pan')">
-                <div id="ch6PeakMeter" style="width: 70px; height: 100px; margin-top:400px; position:absolute;"></div>
+                <div id="ch6PeakMeter"></div>
                 <input type="range" class="chVol slider" orient="270deg" id="ch6Vol"  value="100" onchange="ch6Volume()">
             </div>
         <!--Master-->
+        <div id="masitem7">
         <div class="masterSec">
+            <p class="head">MAS</p>
             <div class="masBtns">
-                <button class="masBtnInd" onclick="masterChPlayBtn('1')">channel 1 on/off</button>
-                <button class="masBtnInd" onclick="masterChPlayBtn('2')">channel 2 on/off</button>
-                <button class="masBtnInd" onclick="masterChPlayBtn('3')">channel 3 on/off</button><br>
-                <button class="masBtnInd" onclick="masterChPlayBtn('4')">channel 4 on/off</button>
-                <button class="masBtnInd" onclick="masterChPlayBtn('5')">channel 5 on/off</button>
-                <button class="masBtnInd" onclick="masterChPlayBtn('6')">channel 6 on/off</button>
+                <div class="button-wrapper">
+                    <button class="masBtnInd" onclick="masterChPlayBtn('1')" id="ch1PlayBtn">channel 1</button>
+                    <p id="ch1PlayBtn" style="align-self: end; color: white; width: 80px;">
+                        Playing
+                    </p>
+                    <button class="masBtnInd" onclick="masterChPlayBtn('2')" id="ch2PlayBtn">channel 2</button>
+                    <p id="ch2PlayBtn" style="align-self: end; color: white; width: 80px;">
+                        Playing
+                    </p>
+                    <button class="masBtnInd" onclick="masterChPlayBtn('3')" id="ch3PlayBtn">channel 3</button>
+                    <p id="ch3PlayBtn" style="align-self: end; color: white; width: 80px;">
+                        Playing
+                    </p>
+                    <button class="masBtnInd" onclick="masterChPlayBtn('4')" id="ch4PlayBtn">channel 4</button>
+                    <p id="ch4PlayBtn" style="align-self: end; color: white; width: 80px;">
+                        Playing
+                    </p>
+                    <button class="masBtnInd" onclick="masterChPlayBtn('5')" id="ch5PlayBtn">channel 5</button>
+                    <p id="ch5PlayBtn" style="align-self: end; color: white; width: 80px;">
+                        Playing
+                    </p>
+                    <button class="masBtnInd" onclick="masterChPlayBtn('6')" id="ch6PlayBtn">channel 6</button>
+                    <p id="ch6PlayBtn" style="align-self: end; color: white; width: 80px;">
+                        Playing
+                    </p>
+                </div>
             </div>
-            <div id="mPeakMeter" style="width: 80px; height: 200px; margin-right:20;"></div>
+            <div id="mPeakMeter" style="width: 80px; height: 195px; margin-right:20px; position: relative; margin-top: 25px;"></div>
             <input type="range" orient="270deg" min="1" max="100" value="100" class="slider" id="mVol" onchange="mVolume()">
+            <div style="margin-top: 25px; text-align: center; margin-left: 10px;">
+            <button class="masBtnInd" onclick="masterChPlayBtn('7')" id="ch7PlayBtn">Master</button>
+                <p id="ch7PlayBtn" style="align-self: end; color: white; width: 80px;">
+                    Playing
+                </p>
+            </div>
         </div>
         <div class="fxSec">
             <p>Fx</p>
@@ -366,5 +395,6 @@
                 </div>
             </div>
         </div>
-
+        </div>
+    </div>
 </html>

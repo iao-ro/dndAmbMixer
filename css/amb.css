@@ -1,7 +1,75 @@
+/* Grid align */
+    .content-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+		gap: 20px;
+		grid-auto-rows: max-content;
+		grid-template-areas:
+			"a b c d e f g";
+		/* align-items: center;
+		justify-items: center;
+		text-align: center; */
+	}
+/* Grid IDs */
+    #chitem1 {
+		grid-area: a;
+	}
+	#chitem2 {
+		grid-area: b;
+	}
+	#chitem3 {
+		grid-area: c;
+	}
+    #chitem4 {
+		grid-area: d;
+	}
+    #chitem5 {
+		grid-area: e;
+	}
+    #chitem6 {
+		grid-area: f;
+	}
+    #masitem7 {
+		grid-area: g;
+	}
+/* Grid align mas buttons */
+    .button-wrapper {
+        /* height: 210px; */
+        margin-top: 25px;
+		display: grid;
+		grid-template-columns: 100px 100px 100px;
+		/* gap: 5px; */
+		grid-auto-rows: 95px;
+		grid-template-areas:
+			"a b c"
+            "d e f";
+		align-items: start;
+		justify-items: center;
+		text-align: center;
+	}
+/* button Grid IDs */
+    #ch1PlayBtn {
+		grid-area: a;
+	}
+	#ch2PlayBtn {
+		grid-area: b;
+	}
+	#ch3PlayBtn {
+		grid-area: c;
+	}
+    #ch4PlayBtn {
+		grid-area: d;
+	}
+    #ch5PlayBtn {
+		grid-area: e;
+	}
+    #ch6PlayBtn {
+		grid-area: f;
+	}
 /* main styling */
 body {
 	background-color:rgb(214, 214, 214);
-    background-image: url("../img/parchment.png");
+    /* background-image: url("../img/parchment.png"); */
     background-blend-mode: overlay;
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
@@ -33,27 +101,28 @@ p {
     margin-left: -8px;
 }
 .mixCol {
-    background-image: url("../img/mixcol.png");
+    /* background-image: url("../img/mixcol.png"); */
     object-fit: fill;
     background-color: black;
-    margin-left: 30px;
-    width: 100px;
-    height:500px;
+    /* margin-left: 30px; */
+    width: 175px;
+    height:550px;
     display: flex;
-    float: left;
+    justify-self: center;
+    /* float: left; */
 }
 .chName{
     margin-top: 0px;
 }
 .srcSel{
-    width: 100px;
+    width: 175px;
     height: 19px;
     display: block;
     margin-top: 20px;
     position: absolute;
 }
 .mixCol p{
-    width: 100px;
+    width: 175px;
     background-color: white;
     height:19px;
     position: absolute;
@@ -84,22 +153,22 @@ input[type=range].slider:hover::-webkit-slider-thumb{
     box-shadow: 0 0 1px black;
 }
 .chVol{
-    margin-top: 440px;
-    width: 100px;
+    margin-top: 460px;
+    width: 140px;
     height: 10px;
-    margin-left:30px;
+    margin-left:60px;
     position: absolute;
 }
 #mVol{
-    margin-top: 96px;
-    margin-left: 350px;
+    margin-top: 112px;
+    margin-left: 300px;
     height: 10px;
     width: 190px;
     position: absolute;
 }
 [id$="Pan"]{
     margin-top: 360px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     width: 80px;
     height: 10px;
     z-index: +1;
@@ -120,23 +189,23 @@ input[type=range].slider:hover::-webkit-slider-thumb{
     color: white;
     font-size: 10px;
     margin-top: 38px;
-    margin-left: 5px;
+    margin-left: 16px;
     position: absolute;
 }
 .eqLbl[for="Q"]{
-    margin-left: 63px;
+    margin-left: 141px;
 }
 [id$="Q"].eqSlid{
-    margin-left: -7px;
+    margin-left: 70px;
 }
 .eqCon input{
     margin-top: 120px;
-    margin-left: -60px;
+    margin-left: -50px;
     float: left;
     position: absolute;
 }
 [id^="selFil"]{
-    width: 100px;
+    width: 175px;
     margin-top: 5px;
     margin-left: 0px;
     position: absolute;
@@ -144,16 +213,16 @@ input[type=range].slider:hover::-webkit-slider-thumb{
 }
 [id^="filImg"]{
     margin-top: 5px;
-    margin-left: 25px;
+    margin-left: 67px;
     position: absolute;
     width: 40px;
     height: 35px;
 }
 .freqLbl{
-    margin-left: 30px;
+    margin-left: 40px;
 }
 .qLbl{
-    margin-left: 80px;
+    margin-left: 120px;
 }
 .maxLbl{
     color: white;
@@ -172,7 +241,7 @@ input[type=range].slider:hover::-webkit-slider-thumb{
     position: absolute;
 }
 .fxSel{
-    width: 100px;
+    width: 175px;
     height: 19px;
     display: block;
     margin-top: 300px;
@@ -180,20 +249,21 @@ input[type=range].slider:hover::-webkit-slider-thumb{
 }
 .volBtns{
     font-size: 6px;
-    width: 30px;
+    width: 40px;
     height: 20px;
     margin-top: 325px;
     position: absolute;
 }
 [id$="MuteBtn"]{
-    margin-left: 15px;
+    margin-left: 30px;
     background-color: grey;
 }
 [id$="SoloBtn"]{
-    margin-left: 55px;
+    margin-left: 105px;
     background-color: grey;
 }
 .panLbl{
+    margin-left: 88px;
     margin-top: 357px;
     color: white;
     font-size: 10px;
@@ -202,28 +272,41 @@ input[type=range].slider:hover::-webkit-slider-thumb{
 .masterSec{
     background-color: black;
     width: 500px;
-    height: 200px;
-    margin-left: 70%;
+    height: 220px;
+    justify-self: center;
+    /* margin-left: 70%; */
     display: flex;
+    /* position: absolute;
+    float: right; */
+}
+.masterSec .head{
+    background-color: white;
     position: absolute;
-    float: right;
+    width: 500px;
+    margin-top: 0;
 }
-.masBtns{
-    height: 20px;
-}
+/* .masBtns{
+    height: 220px;
+} */
 .masBtnInd{
-    margin-top: 20px;
-    margin-bottom: 60px;
+    /* margin-top: 25px;
+    margin-bottom: 60px; */
+    margin-left: 5px;
+    margin-right: 5px;
+    /* height: 85px; */
+    /* width: 90px; */
 }
 .fxSec{
     background-color: black;
-    margin-top: 250px;
-    margin-left: 10px;
-    margin-right: 50px;
+    align-self: flex-end;
+    justify-self: center;
+    margin-top: 30px;
+    /*margin-left: 10px;
+    margin-right: 50px; */
     width: 130px;
     height: 250px;
-    display: flex;
-    float: right;
+    /* display: flex; */
+    /* float: right; */
 }
 .fxSec p{
     width: 130px;
@@ -309,11 +392,17 @@ input[type=range].slider:hover::-webkit-slider-thumb{
 }
 /*Knobs */
 .panKnobs {
-    margin-left: 27px;
+    margin-left: 115px;
 }
 
 header{
     margin-top: 0px;
     padding: 3px;
     position: absolute;
+}
+[id$="PeakMeter"]{
+    height: 190px;
+    width: 70px; 
+    margin-top:355px;
+    position:absolute;
 }
